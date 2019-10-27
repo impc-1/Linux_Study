@@ -1,0 +1,6 @@
+gcc -c creat.c change.c menu.c read.c show.c write.c
+
+ar -rc libmytest.a creat.o change.o read.o menu.o show.o write.o
+rm *.o
+
+gcc main.c -o test -L. -lmytest
